@@ -1,0 +1,185 @@
+body {
+    background: #ffffff;
+}
+        .uv-header {
+    background-color: #ffffff;
+}
+        .uv-hero {
+    background-color: #fa612a;
+}
+        a:not(.uv-btn):not(.uv-btn-small):not(.uv-table td a) {
+    color: #fa612a !important;
+}
+        a:hover:not(.uv-btn):not(.uv-btn-small):not(.uv-table td a) {
+    color: #fa612a !important;
+}
+        .uv-editor p {
+    color: #333333;
+}
+
+.uv-btn-small,
+    .uv-btn,
+    .uv-btn-large,
+    .uv-btn-action,
+    .uv-btn-label {
+        background: #fa612a;}
+        .uv-btn-small:hover,
+        .uv-btn:hover,
+        .uv-btn-large:hover,
+        .uv-btn-action:hover,
+        .btn:hover,
+        .uv-btn-label:hover {
+            background: #fa612a;
+            opacity: .85;
+        }
+    
+        .uv-btn-small:active,
+        .uv-btn:active,
+        .uv-btn-large:active,
+        .uv-btn-action:active,
+        .btn:active,
+        .uv-btn-label:active {
+            background: #fa612a;
+            opacity: .65;
+        }
+    
+        .uv-btn-stroke:active {
+            border-color: #fa612a;
+        }
+    
+        .uv-dropdown .uv-dropdown-btn-active {
+            border: solid 1px #fa612a;
+        }
+    
+        .uv-select:focus,
+        .uv-field:focus,
+        .uv-search-inline:focus {
+            border-color: #fa612a;
+        }
+    
+        .uv-loader span:before,
+        .uv-loader span:after {
+            background: #fa612a;
+        }
+    
+        .bootstrap-datetimepicker-widget table td.active,
+        .bootstrap-datetimepicker-widget table td.active:hover {
+            background-color: #fa612a;
+        }
+    
+        .btn-primary,
+        .btn-primary:hover,
+        .btn-primary:active {
+            background-color: #fa612a;
+        }
+    
+        .uv-hero {
+            background-color: #fa612a;
+        }
+        
+        .uv-cta-wrapper .uv-cta-lt svg path {
+            fill: #fa612a;
+        }
+        .uv-kb-layout-folder .uv-kb-folder {
+            border-color: #fa612a;
+        }
+    
+        .uv-kb-layout-grid .uv-kb-folder{
+            border-color: #fa612a;
+        }
+    
+        .uv-kb-layout-folder .uv-kb-folder .uv-kb-folder-lt {
+            background-position: -90px 0px;
+            background-color: #fa612a;
+        }
+        
+        .uv-paper-article .uv-paper-section .uv-folder-title:after {
+            background-color: #fa612a;
+        }
+    
+        .uv-kb-layout-category .uv-kb-folder {
+            border-bottom-color: #fa612a;
+        }
+    
+        .uv-brand {
+            color: #fa612a;
+        }
+    
+        .uv-pagination a:hover {
+            background-color: #fa612a;
+            border-color: rgba(0,0,0,.1);
+        }
+    
+        .uv-nav-tab ul.uv-nav-tab-label li .uv-nav-tab-active,
+        .uv-nav-tab ul.uv-nav-tab-label li a:hover {
+            border-bottom-color: #fa612a;
+        }
+        .uv-skin-dark .uv-ticket-view .uv-ticket-accordion .uv-ticket-count-stat,
+        .uv-skin-dark .uv-ticket-view .uv-ticket-accordion .uv-ticket-count-stat:hover {
+            background: #fa612a;
+        }
+
+        .uv-dropdown-list  {
+            text-align: left;
+        }
+        .uv-dropdown-list ul li {
+            width: 100%;
+        }
+        .uv-header .uv-header-rt .uv-dropdown-list ul li a {
+            color: #333;
+            font-size: 16px;
+            padding: 0;
+        }
+        .uv-header .uv-header-rt .uv-dropdown-list ul li a:hover {
+            color: #2750C4;
+            text-decoration: none;
+        }
+        .uv-profile-block .uv-bottom-right{
+            top: auto !important;
+        }
+        .uv-rtl header .uv-header-rt > span {
+            display: block;
+        }
+        .uv-rtl header .uv-header-rt > span > .uv-dropdown-list {
+            right: unset;
+            left: 0px;
+            top: 70px;
+            text-align: right;
+        }
+                .uv-hero {
+                background-color: #fa612a;
+            }
+            .uv-header .uv-header-rt .uv-hamburger svg path {
+                fill: #fa612a;
+            }
+            .uv-skin-dark .uv-hero {
+                background-color: #fa612a;
+            }
+                    a:not(.uv-btn):not(.uv-btn-small):not(.uv-btn-social):not(.uv-table):not(.not-shiny) {
+                color: #fa612a !important;
+            }
+                    a:not(.uv-btn):not(.uv-btn-small):not(.uv-btn-social):not(.uv-table):not(.not-shiny):hover {
+                color: #fa612a !important;
+            }
+                    .uv-paper-article .uv-paper-section > section > p {
+                color: #333333 !important;
+            }
+            .uv-paper-article .uv-paper-section > section > ul {
+                color: #333333 !important;
+            }
+            .goog-te-gadget-simple .goog-te-menu-value, .goog-te-gadget-simple .goog-te-menu-value:hover {
+            color: #333!important;
+        }
+
+        .uv-field{
+			padding: 5px 10px;
+		}
+		.grammarly-fix-message-container {
+			overflow: visible !important;
+		}
+		.grammarly-fix-message {
+			max-width: 158%;
+		}
+		.uv-field-success-icon {
+			display: none !important;
+		}

@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='knowledgebase.css')}}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.0/backbone-min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.validation/0.11.5/backbone-validation-min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.paginator/2.0.8/backbone.paginator.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>	
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+        
+        <script src="{{ url_for('static',filename='_common.js')}}"></script>
+        <script src = "{{ url_for('static',filename='uikit.front.js')}}"></script>
+        <script src = "{{ url_for('static',filename='dropdown.js')}}"></script>
+
+                        
+                <link rel="canonical" href="http://hilfe.amalitech.org">
+
+                    <link rel="icon" sizes="16x16" href="/favicon.ico" />
+        
+                    <title>Create Ticket</title>
+                        
+            <meta http-equiv="Content-Type" content="text/html;" charset="UTF-8"/>
+            <meta name="robots" content="INDEX,FOLLOW" />
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <meta property="og:locale" content="en" />
+            <meta property="og:type" content="article" />
+            <meta property="og:title" content="Create Ticket" />
+            <!-- <meta property="og:url" content="http://hilfe.amalitech.org" /> -->
+            <meta property="og:site_name" content="Hilfe" />
+                            <meta property="og:image" content="{{ url_for('static',filename='MicrosoftTeams-image.png')}}" />
+                        <meta name="twitter:card" content="summary" />
+            <meta name="twitter:title" content="Create Ticket" />
+
+            <link rel='dns-prefetch' href='//www.google.com' />
+            <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+            <link rel='dns-prefetch' href='//fonts.gstatic.com' />
+            <link rel='dns-prefetch' href='//cdn.uvdesk.com' />
+        
+                                    	<link rel="icon" sizes="16x16" href="/favicon.ico" />
+       
+            </head>
+
+           
+    <body class=" ">
+                
+        <div class="uv-notifications-wrapper">
+                                                                    
+            <noscript>
+                <div class="uv-notification uv-error">
+                    <p>Your browser does not support Javascript or Javascript is disabled. Please correct this!</p>
+                </div>
+                <style>.uv-loader-view {display: none;}</style>
+            </noscript>
+        </div>
+
+
+                 
+            <!--Header-->
+
+  
+</style>
+<div class="uv-header">
+    <div class="uv-container">
+        <header>
+            <div class="uv-header-lt">
+                <a class="uv-logo" href="/en/folder">
+                                            <img src="{{ url_for('static',filename='MicrosoftTeams-image.png')}}" alt="Hilfe" />
+                                    </a>
+            </div>
+            <div class="uv-header-rt">
+                                    <nav id="front_nav">
+                        <ul>
+                            <li><a href="/en/folder">Home</a></li>
+                            
+                                                                                                <li><a href="/en/customer/create-ticket/" class="uv-btn-small">Contact Us</a></li>
+                                                            
+                                                                                                <li><a href="/en/customer/login" class="uv-btn-small">Sign In</a></li>
+                                  
+                                                    </ul>
+                    </nav>
+                    <div class="uv-hamburger">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="20px" height="15px">
+                        <path fill-rule="evenodd"
+                        d="M18.500,9.000 L1.500,9.000 C0.672,9.000 0.000,8.328 0.000,7.500 C0.000,6.672 0.672,6.000 1.500,6.000 L18.500,6.000 C19.328,6.000 20.000,6.672 20.000,7.500 C20.000,8.328 19.328,9.000 18.500,9.000 ZM18.500,3.000 L1.500,3.000 C0.672,3.000 0.000,2.328 0.000,1.500 C0.000,0.672 0.672,-0.000 1.500,-0.000 L18.500,-0.000 C19.328,-0.000 20.000,0.672 20.000,1.500 C20.000,2.328 19.328,3.000 18.500,3.000 ZM1.500,12.000 L18.500,12.000 C19.328,12.000 20.000,12.672 20.000,13.500 C20.000,14.328 19.328,15.000 18.500,15.000 L1.500,15.000 C0.672,15.000 0.000,14.328 0.000,13.500 C0.000,12.672 0.672,12.000 1.500,12.000 Z"/>
+                        </svg>
+                    </div>
+                            </div>
+        </header>
+    </div>
+</div>
+<!--//Header-->
+        
+            <form method="get" action="/en/search">
+        <div class="uv-nav-bar">
+            <div class="uv-container">
+                <div class="uv-nav-bar-lt">
+                    <ul>
+                                                                                <li><a href="/en/">Support Center</a></li>
+                                                                                                                                            <li><a href="#">Create Ticket Request</a></li>
+                                            </ul>  
+                </div>
+                <div class="uv-nav-bar-rt">
+                    <input class="uv-nav-search" name="s" type="text" placeholder="Search KnowledgeBase" value=""> 
+                </div>
+            </div>
+        </div>
+    </form>
+
+                                    <div class="uv-body">
+                <div class="uv-container">
+	<div class="uv-paper-article uv-paper-form">
+		<div class="uv-paper-section">
+			<section>
+				<h1>Create Ticket Request</h1>
+
+				<div class="uv-form">
+					<form action="customer/create-ticket/" method="post" id="create-ticket-form" enctype="multipart/form-data">
+													<!-- Field -->
+							<div class="uv-element-block">
+								<label class="uv-field-label">Name</label>
+								<div class="uv-field-block">
+									<input name="name" class="uv-field create-ticket" type="text" value="">
+								</div>
+								<span class="uv-field-info">Enter your name</span>
+							</div>
+							<!-- //Field -->
+
+							<!-- Field -->
+							<div class="uv-element-block">
+								<label class="uv-field-label">Email</label>
+								<div class="uv-field-block">
+									<input name="from" class="uv-field create-ticket" type="text" value="">
+								</div>
+								<span class="uv-field-info">Enter your email</span>
+							</div>
+							<!-- //Field -->
+												<!-- Field -->
+						<div class="uv-element-block">
+							<label class="uv-field-label">Type</label>
+							<div class="uv-field-block">
+								<select name="type" class="uv-select create-ticket" id="type">
+									<option value="">Select type</option>
+
+																			<option value="15" >Accessory</option>
+																			<option value="13" >ARMS</option>
+																			<option value="8" >Electrical</option>
+																			<option value="6" >Finance</option>
+																			<option value="18" >Forgot Password </option>
+																			<option value="9" >Furniture</option>
+																			<option value="5" >Google/Microsoft/ARMS Accounts</option>
+																			<option value="21" >HR And Admin (Bonus)</option>
+																			<option value="24" >HR And Admin (Confidential Discussion)</option>
+																			<option value="23" >HR And Admin (Gen. Enquiry)</option>
+																			<option value="20" >HR And Admin (Leave)</option>
+																			<option value="19" >HR And Admin (Loan)</option>
+																			<option value="7" >HR And Admin (Medical Insurance Card)</option>
+																			<option value="22" >HR And Admin (Pension-SSNIT Tier 1, 2, 3)</option>
+																			<option value="25" >HR And Admin (Performance Assessment)</option>
+																			<option value="12" >ID Cards</option>
+																			<option value="2" >Laptop</option>
+																			<option value="4" >Misplaced IT equipments</option>
+																			<option value="16" >Monitor</option>
+																			<option value="27" >MRBS Credential</option>
+																			<option value="1" >Network</option>
+																			<option value="17" >Plumbing</option>
+																			<option value="3" >Printer</option>
+																			<option value="14" >Research and Development</option>
+																			<option value="26" >SECURITY</option>
+																			<option value="10" >System Troubleshooting</option>
+																	</select>
+							</div>
+							<span class="uv-field-info">Choose ticket type</span>
+						</div>
+						<!-- //Field -->
+
+						<!-- Field -->
+						<div class="uv-element-block">
+							<label class="uv-field-label">Subject</label>
+							<div class="uv-field-block">
+								<input name="subject" class="uv-field create-ticket" type="text" value="">
+							</div>
+							<span class="uv-field-info">Ticket subject</span>
+						</div>
+						<!-- //Field -->
+
+						<!-- Field -->
+						<div class="uv-element-block">
+							<label class="uv-field-label">Message</label>
+							<div class="uv-field-block grammarly-fix-message-container">
+								<textarea name="reply" class="uv-field create-ticket grammarly-fix-message" type="text"></textarea>
+							</div>
+							<span class="uv-field-info">Ticket content</span>
+						</div>
+						<!-- //Field -->
+
+						<!-- Field -->
+						<div class="uv-element-block attachment-block uv-no-error-success-icon" id="uv-attachment-option">
+							<label>
+								<span class="uv-file-label">Add Attachment</span>
+							</label>
+						</div>
+						<!-- //Field -->
+						                            <!-- Recaptcha will not support -->
+                        
+																								
+						<div class="uv-element-block">
+							<button type="submit" id="create-ticket-btn" class="uv-btn">Create Ticket</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	                </div>
+        
+        		            <div class="uv-container">
+	<div class="uv-footer">
+		<div class="uv-footer-wrapper">
+			<div class="uv-footer-lt">
+				<ul>
+					<li><a href="/en/folder">Home</a></li>
+					<li><a href="#" class="uv-open-popup" data-target="cookie-dialog-modal">Cookie Policy</a></li>
+											<li><a href="https://amalitech.org" target="_blank">AmaliTech iFS</a></li>
+									</ul>
+			</div>
+		</div>
+    <div class="uv-footer-credit">
+      <span class="uv-credit-text">Powered by <a href="https://www.AmaliTech.com" target="_blank">AmaliTech</a></span>
+    </div>
+	</div>
+</div>
+
+            <script id="pagination_tmp" type="text/template">
+    <% if(pageCount > 1) { %>
+        <div class="uv-pagination">
+            <% if(previous) { %>
+                <a data-page="<%= previous %>" href="<%= url.replace('replacePage', previous) %>" id="previous" class="uv-pagination-previous">
+                </a>
+            <% } else { %>
+                <a class="uv-pagination-previous">
+                </a>
+            <% } %>
+
+            <% if(startPage > 1) { %>
+                <a data-page="1" href="<%= url.replace('replacePage', 1) %>">1</a>
+                <% if(startPage == 3) { %>
+                    <a data-page="2" href="<%= url.replace('replacePage', 2) %>">2</a>
+                <% } else if(startPage != 2) { %>
+                    <a class="uv-page-active" style="text-decoration: none">&hellip;</a>
+                <% } %>
+            <% } %>
+
+            <% _.each(pagesInRange, function(page) { %>
+                <% if(page != current) { %>
+                    <a data-page="<%= page %>" href="<%= url.replace('replacePage', page) %>">
+                        <%= page %>
+                    </a>
+                <% } else { %>
+                    <a class="uv-page-active"><%= page %></a>
+                <% } %>
+            <% }) %>
+
+            <% if(pageCount > endPage) { %>
+                <% if(pageCount > (endPage + 1) ) { %>
+                    <% if(pageCount > (endPage + 2) ) { %>
+                        <a class="uv-page-active" style="text-decoration: none">&hellip;</a>
+                    <% } else { %>
+                        <a data-page="<%= pageCount - 1 %>" href="<%= url.replace('replacePage', pageCount - 1) %>">
+                            <%= pageCount - 1 %>
+                        </a>
+                    <% } %>
+                <% } %>
+                <a data-page="<%= pageCount %>" href="<%= url.replace('replacePage', pageCount) %>">
+                    <%= pageCount %>
+                </a>
+            <% } %>
+
+            <% if(next) { %>
+                <a href="<%= url.replace('replacePage',next) %>" data-page="<%= next %>" id="next" class="uv-pagination-next">
+                </a>
+            <% } else { %>
+                <a class="uv-pagination-next">
+                </a>
+            <% } %>
+        </div>
+    <% } %>
+</script>
+
+            <!-- Loader Template-->
+            <script type="text/template" id="loader-tmp">
+                <div class="uv-loader">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </script>
+            <!-- Loader Template-->
+
+            <!-- Full View Loader Template-->
+            <script type="text/template" id="full-view-loader">
+                <div class="uv-loader-view">
+                    <div class="uv-loader">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </script>
+            <!-- //Full View Loader Template-->
+
+            <!-- Notification Template -->
+            <script type="text/template" id="notification-template">
+                <div class="uv-notification <% if(alertClass == 'danger') { %>uv-error<% } else { %> <%= 'uv-' + alertClass %> <% } %>">
+                    <span class="uv-notification-close"></span>
+                    <p><%= alertMessage %> </p>
+                </div>
+            </script>
+            <script type="text/javascript">
+                var warningResponse = {
+                    'alertClass' : 'danger',
+                    'alertMessage' : 'Error: Something went wrong, please try again later',
+                };
+            </script>
+
+            <div class="uv-pop-up-overlay uv-no-error-success-icon" id="cookie-dialog-modal" style="display:none;">
+    <div class="uv-pop-up-box uv-pop-up-wide">
+        <span class="uv-pop-up-close"></span>
+        <h2 style="text-align: center; margin-bottom: 30px;">Cookie Usage Policy</h2>
+        <div class="uv-element-block" style="line-height: 1.8em;">
+            <p>Some of our site pages utilize <em>cookies</em> and other tracking technologies. A <em>cookie</em> is a small text file that may be used, for example, to collect information about site activity. Some cookies and other technologies may serve to recall personal information previously indicated by a site user. You may block cookies, or delete existing cookies, by adjusting the appropriate setting on your browser. Please consult the <b>HELP</b> menu of your browser to learn how to do this. If you block or delete <em>cookies</em> you may find the usefulness of our site to be impaired.</p>
+            <p>To know more about our privacy policy, please visit <a href="https://amalitech.com" target="_blank">visit our website</a>.</p>
+        </div>
+    </div>
+</div>
+        
+
+	
+	<style>
+    input.attachment {
+        display: none;
+    }
+</style>
+<script type="text/javascript">
+    $(function () {
+        var FileView = Backbone.View.extend({
+            fileCounter: 0,
+            max_post_size: 8388608,
+            max_file_uploads: 20,
+            upload_max_filesize: 2097152,
+            el: '.attachment-block',
+            events : {
+                'click .uv-file-label': 'createFileType',
+                'change .attachment': 'selectFile',
+                'click .uv-added-attachment span': 'removeFile',
+                'click .uv-field-message': 'removeError',
+            },
+            createFileType: function(e) {
+                this.removeError(e)
+                var currentElement = Backbone.$(e.currentTarget),
+                    attachmentBlock = currentElement.parents('.attachment-block')
+                if (attachmentBlock.children('.uv-added-attachment').length + 1 > this.max_file_uploads) {
+                    attachmentBlock.append(this.getDefaultErrorMessage())
+                    return;
+                }
+                this.fileCounter += 1;
+                attachmentBlock.append('<div class="uv-added-attachment" style="display: none" id="file-' + this.fileCounter + '"><div class="uv-attachment"><input type="file" name="attachments[]" class="attachment" multiple="multiple"></div><span></span></div>')
+                $('#file-' + this.fileCounter).find('.attachment').trigger('click')
+            },
+            labelTemplate: _.template('<label class="file-name"><%- fileName %></label><br>'),
+            selectFile: function(e) {
+                var currentElement = Backbone.$(e.currentTarget);
+                var attachmentBlock = currentElement.parents(".uv-added-attachment");
+                var isError = false;
+                
+                if (currentElement.length) {
+                    files = currentElement[0].files; 
+
+                    if (files.length) {
+                        for (var i = 0; i < files.length; i++) {
+                            var fileName = files[i].name;
+                            
+                            if (files[i].size > this.upload_max_filesize) {
+                                isError = true;
+                                break;
+                            }
+
+                            // Validating Form Size
+                            var formSize = 0
+                            var formData = new FormData(currentElement.parents('form')[0])
+                            
+                            for (var pair of formData.entries()) {
+                                if (pair[1] instanceof Blob) {
+                                    formSize += pair[1].size
+                                } else {
+                                    formSize += pair[1].length
+                                }
+                            }
+
+                            if (formSize > this.max_post_size) {
+                                isError = true
+                            }
+
+                            attachmentBlock.append(this.labelTemplate({'fileName': fileName}));
+                        }
+                    }
+                }
+                
+                if (isError) {
+                    attachmentBlock.parents('.attachment-block').append(this.getDefaultErrorMessage())
+                    attachmentBlock.remove()
+                    return
+                }
+
+                attachmentBlock.show()
+            },
+            removeFile: function(e) {
+                this.removeError(e)
+                Backbone.$(e.currentTarget).parents('.uv-added-attachment').remove()
+            },
+            getDefaultErrorMessage: function() {
+                return '<span class="uv-field-message">You can send up to ' + Math.floor(this.upload_max_filesize/(1024*1024)) + ' MB in attachments. If you have more than one attachment, they can\'t add up to more than ' + Math.floor(this.max_post_size/(1024*1024))  + ' MB and ' + this.max_file_uploads + ' attachments in total.</span>'
+            },
+            removeError: function(e) {
+                Backbone.$(e.currentTarget).parents('.attachment-block').find('.uv-field-message').remove()
+            }   
+        });
+        
+        var fileView = new FileView();
+    });
+</script>
+
+	<script type="text/javascript">
+		customFieldValidation = {};
+			$(function () {
+						$('.uv-header-date').datetimepicker({
+            	format: 'YYYY-MM-DD',
+        	});
+        	$('.uv-header-time').datetimepicker({
+            	format: 'LT',
+        	});
+        	$('.uv-header-datetime').datetimepicker({
+            	format: 'YYYY-MM-DD H:m:s'
+        	});
+			var CreateTicketModel = Backbone.Model.extend({
+				idAttribute : "id",
+				defaults : {
+					path : "",
+				},
+				validation: _.extend(customFieldValidation, {
+											'name' : {
+							required : true,
+							msg : 'This field is mandatory'
+						},
+						'from' :
+						[{
+							required : true,
+							msg : 'This field is mandatory'
+						},{
+							pattern : 'email',
+							msg : 'Email address is invalid'
+						}],
+										'type' : {
+						required : true,
+						msg : 'This field is mandatory'
+					},
+					'subject' : {
+						required : true,
+						msg : 'This field is mandatory'
+					},
+					'reply' : {
+						required : true,
+						msg : 'This field is mandatory'
+					},
+									}),
+				urlRoot : "/en/customer/create-ticket/"
+			});
+			var CreateTicketForm = Backbone.View.extend({
+				initialize : function() {
+					Backbone.Validation.bind(this);
+					var jsonContext = JSON.parse('[]');
+					for (var field in jsonContext) {
+						Backbone.Validation.callbacks.invalid(this, field, jsonContext[field], 'input');
+					}
+				},
+				events : {
+					'click #create-ticket-btn' : "saveTicket",
+					'change #type' : "updateCustomFields",
+					'blur input:not(input[type=file]), textarea, select, checkbox': 'formChanegd',
+					'change input[type=file]': 'formChanegd',
+				},
+				formChanegd: function(e) {
+					this.model.set(Backbone.$(e.currentTarget).attr('name'), Backbone.$(e.currentTarget).val())
+					this.model.isValid([Backbone.$(e.currentTarget).attr('name')])
+				},
+				saveTicket : function (e) {
+					e.preventDefault();
+					var currentElement = Backbone.$(e.currentTarget);
+					var data = currentElement.closest('form').serializeObject();
+					this.model.set(data);
+					if(this.model.isValid(true)) {
+						$('#create-ticket-form').submit();
+						$('form').find('#create-ticket-btn').attr('disabled', 'disabled');
+					}
+				},
+				updateCustomFields : function (e) {
+					var dependentFields = e.currentTarget.value;
+					this.$('.dependent').hide();
+					this.$('.dependency' + dependentFields).show();
+				}
+			});
+			var createticketForm = new CreateTicketForm({
+				el : $("#create-ticket-form"),
+				model : new CreateTicketModel()
+			});
+		});
+	</script>
+    </body>
+</html>
